@@ -1,0 +1,11 @@
+{% if clubs_list %}
+<ul>
+    {% for club in clubs_list %}
+    <li><h3>{{club.name}}</h3><br>
+        <p>{{club.description}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
