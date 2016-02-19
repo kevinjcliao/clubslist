@@ -1,5 +1,42 @@
 from django.db import models
- # TODO: Add a weekly meeting time. 
+ # TODO: Add a weekly meeting time.
+
+"""
+So this is a model file.
+
+How does it work?
+Basically, I mocked up my app in Sketch and
+I asked myself what I wanted my app to look like. After I did
+that, I outlined what kind of data I wanted to store. Mocking
+up my data isn't necessary, but it gives me a general idea of
+what kind of data I'm going to be working with.
+
+After I mocked up my app, I used this models file to edit the
+outline of how I want my data to be stored in a 'clubs' file.
+
+REMEMBER: After every single time I edit the models file, I
+need to let Django translate everything into database
+language (SQL). This means after every single time I edit
+models, I MUST run in bash (or command line) at the project
+directory the command:
+
+>> python manage.py makemigrations clubs
+
+Which tells Python: Hey, I made some changes to the model.
+Read through what I did, and make the relevant changes to
+how you handle databases. Python then makes a list of
+changes that need to be done, but this isn't actually
+applied because as the name 'makemigrations' implies,
+it only creates the changes to be made. It doesn't make
+them. If I want to make the changes, I must type:
+
+>> python manage.py migrate
+
+Which then changes the database and makes it ready to
+handle the new type of data that I'm storing.
+
+Cool, huh? 
+"""
 class Club(models.Model):
     ACADEMIC                = "AC"
     AFFINITY                = "AF"
