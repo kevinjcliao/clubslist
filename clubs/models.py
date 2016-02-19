@@ -1,5 +1,5 @@
 from django.db import models
-
+ # TODO: Add a weekly meeting time. 
 class Club(models.Model):
     ACADEMIC                = "AC"
     AFFINITY                = "AF"
@@ -30,7 +30,7 @@ class Club(models.Model):
         )
     category    = models.CharField(max_length=2,
                                    choices = CATEGORY_CHOICES, default=ACADEMIC)
-    cover_image    = models.ImageField()
+    cover_image   = models.ImageField()
     name           = models.CharField(max_length=20, default="Your Club Name Here")
     contact_person = models.CharField(max_length=20, default="Dan Weiss")
     contact_email  = models.CharField(max_length=20, default="dweiss@haverford.edu")
@@ -40,3 +40,6 @@ class Club(models.Model):
     image_1        = models.ImageField()
     image_2        = models.ImageField()
     image_3        = models.ImageField()
+
+    def __str__(self):
+        return self.name
