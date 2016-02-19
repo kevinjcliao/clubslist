@@ -35,7 +35,7 @@ them. If I want to make the changes, I must type:
 Which then changes the database and makes it ready to
 handle the new type of data that I'm storing.
 
-Cool, huh? 
+Cool, huh?
 """
 class Club(models.Model):
     ACADEMIC                = "AC"
