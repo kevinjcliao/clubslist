@@ -2,19 +2,29 @@
 
 <!DOCTYPE html>
 <html lang="en-US">
-  <header>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}"> 
-  </header>
-
-{% if clubs_list %}
-<ul>
-    {% for club in clubs_list %}
-    <li><h3>{{club.name}}</h3><br>
-        <p>{{club.description}}</p>
-    </li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No polls are available.</p>
-{% endif %}
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Check out the {{clubs_size}} clubs at Haverford College!</h1>
+    </div>
+    <div class="list_container">
+      {% if clubs_list %}
+      <ul>
+        {% for club in clubs_list %}
+        <div class="club_item">
+          <li><h3>{{club.name}}</h3><br>
+            <p>{{club.description}}</p>
+          </li>
+        </div>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No clubs are currently registered in the system.</p>
+      {% endif %}
+    </div>
+  </body>
 </html>
