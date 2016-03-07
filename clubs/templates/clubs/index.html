@@ -12,12 +12,17 @@
       <h1>Check out the {{clubs_size}} clubs at Haverford College!</h1>
     </div>
     <div class="list_container">
-      {% if clubs_list %}
+      {% if there_are_clubs %}
       <ul>
-        {% for club in clubs_list %}
-        <div class="club_item">
-          <li><h3>{{club.name}}</h3><br>
+        {% for category, clubs in clubs_list %}
+        <div class="club_category">
+          <li><h3>{{category}}</h3><br>
+            {% for club in clubs %}
+            <div class="club_item">
+              <li><h4>{{club.name}}</h4></li>
+            </div>
             <p>{{club.description}}</p>
+            {% endfor %}
           </li>
         </div>
         {% endfor %}
