@@ -65,9 +65,10 @@ class Club(models.Model):
         (STUDENT_GOVERNMENT, "Student Government Organization"),
         (VISUAL_PERF_ART, "Visual and Performing Arts"),
         )
-    category    = models.CharField(max_length=2,
-                                   choices = CATEGORY_CHOICES, default=ACADEMIC)
-    cover_image   = models.ImageField()
+    category       = models.CharField(max_length=2,
+                                   choices = CATEGORY_CHOICES,
+                                      default=ACADEMIC)
+    cover_image    = models.ImageField()
     name           = models.CharField(max_length=20, default="Your Club Name Here")
     contact_person = models.CharField(max_length=20, default="Dan Weiss")
     contact_email  = models.CharField(max_length=20, default="dweiss@haverford.edu")
