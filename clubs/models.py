@@ -58,7 +58,7 @@ class Club(models.Model):
         (MEDIA_AND_PUBLICATIONS, "Media and Publications"),
         (MUSIC, "Music"),
         (PREPROFESSIONAL, "Preprofessional Society"),
-        (RELIGIOUS_AND_SPIRITUAL, "Religious and Spiritugal Groups"),
+        (RELIGIOUS_AND_SPIRITUAL, "Religious and Spiritual Groups"),
         (SERVICE, "Service Groups"),
         (SPECIAL_INTEREST, "Special Interests and Hobbies"),
         (SPORTS_AND_OUTDOORS, "Sports and Outdoors Clubs"),

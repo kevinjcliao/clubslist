@@ -17,7 +17,7 @@ def hello_world(request):
 
     print categorized_club_list
 
-    there_are_clubs = clubs_size>0
+    there_are_clubs = clubs_size > 0
 
     template = loader.get_template('clubs/index.html')
     context = {
