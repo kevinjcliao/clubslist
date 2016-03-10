@@ -3,6 +3,14 @@ from django.http import HttpResponse
 from django.template import loader
 from .models import Club
 
+def club_detail(request, club_name, club_id):
+    try:
+        club = Club.objects.get(pk=club_id)
+    except Club.DoesNotExist:
+        raise Http404("Club does not exist.")
+
+    return HttpResponse("You're looking at club %s" % club.description)
+
 def hello_world(request):
     clubs_categories = Club.CATEGORY_CHOICES
     categorized_club_list = []

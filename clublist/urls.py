@@ -23,5 +23,7 @@ admin.site.site_header = "Students' Council Club List"
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.hello_world)
+    url(r'^$', views.hello_world),
+    url(r'^(?P<club_id>[0-9]+)/(?P<club_name>[\S]*)/$', views.club_detail, name="club_detail"),
+    # Club_Details: e.g. /fig
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
